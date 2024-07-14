@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <title>carWashSettlementForm</title>
+    <style>
+      .basicPricing1,
+      .basicPricing2,
+      .basicPricing3,
+      .basicVehicle1,
+      .basicVehicle2,
+      .basicVehicle3,
+      .coatingPricing1,
+      .coatingPricing2,
+      .coatingPricing3,
+      .coatingVehicle1,
+      .coatingVehicle2,
+      .coatingVehicle3,
+      .markupPricing,
+      .markupVehicle,
+      .markupAmount,
+      .principal,
+      .lunchFee,
+      .otherFee {
+        width: 60px;
+        text-align: right !important;
+      }
+
+      .input-group-text {
+        width: 60px;
+        justify-content: end;
+      }
+
+      .todayVehicle,
+      .yesterdayVehicle,
+      .ownVehicle,
+      .principal,
+      .lunchFee,
+      .otherFee,
+      .shouldVehicle,
+      .statisticsVehicle,
+      .statisticalTotalAmount,
+      .statisticalAmount,
+      .shouldAmount {
+        width: 84px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-bordered">
+            <thead>
+              <tr style="text-align: center;">
+                <th colspan="5" class="title"></th>
+              </tr>
+              <tr>
+                <th style="width: 8%;"></th>
+                <th style="width: 23%;">140</th>
+                <th style="width: 23%;">140-175</th>
+                <th style="width: 23%;">175</th>
+                <th style="width: 23%;">加價</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>基本水洗</th>
+                <td>
+                  <div class="input-group" style="justify-content: end;">
+                    <input
+                      class="basicPricing1"
+                      type="text"
+                      class=""
+                      placeholder="定價"
+                      value="250"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        x
+                      </span>
+                    </div>
+                    <input
+                      class="basicVehicle1"
+                      type="text"
+                      class=""
+                      placeholder="台數"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text basicAmount1"
+                        style="
+                          text-align: right;
+                          width: 60px;
+                          justify-content: end;
+                        "
+                      >
+                        0
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="input-group" style="justify-content: end;">
+                    <input
+                      class="basicPricing2"
+                      type="text"
+                      class=""
+                      placeholder="定價"
+                      value="300"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        x
+                      </span>
+                    </div>
+                    <input
+                      class="basicVehicle2"
+                      type="text"
+                      class=""
+                      placeholder="台數"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text basicAmount2"
+                        style="
+                          text-align: right;
+                          width: 60px;
+                          justify-content: end;
+                        "
+                      >
+                        0
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="input-group" style="justify-content: end;">
+                    <input
+                      class="basicPricing3"
+                      type="text"
+                      class=""
+                      placeholder="定價"
+                      value="350"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        x
+                      </span>
+                    </div>
+                    <input
+                      class="basicVehicle3"
+                      type="text"
+                      class=""
+                      placeholder="台數"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text basicAmount3"
+                        style="
+                          text-align: right;
+                          width: 60px;
+                          justify-content: end;
+                        "
+                      >
+                        0
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>亮彩鍍膜</th>
+                <td>
+                  <div class="input-group" style="justify-content: end;">
+                    <input
+                      class="coatingPricing1"
+                      type="text"
+                      class=""
+                      placeholder="定價"
+                      value="300"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        x
+                      </span>
+                    </div>
+                    <input
+                      class="coatingVehicle1"
+                      type="text"
+                      class=""
+                      placeholder="台數"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text coatingAmount1"
+                        style="
+                          text-align: right;
+                          width: 60px;
+                          justify-content: end;
+                        "
+                      >
+                        0
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="input-group" style="justify-content: end;">
+                    <input
+                      class="coatingPricing2"
+                      type="text"
+                      class=""
+                      placeholder="定價"
+                      value="350"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        x
+                      </span>
+                    </div>
+                    <input
+                      class="coatingVehicle2"
+                      type="text"
+                      class=""
+                      placeholder="台數"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text coatingAmount2"
+                        style="
+                          text-align: right;
+                          width: 60px;
+                          justify-content: end;
+                        "
+                      >
+                        0
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="input-group" style="justify-content: end;">
+                    <input
+                      class="coatingPricing3"
+                      type="text"
+                      class=""
+                      placeholder="定價"
+                      value="400"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        x
+                      </span>
+                    </div>
+                    <input
+                      class="coatingVehicle3"
+                      type="text"
+                      class=""
+                      placeholder="台數"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text coatingAmount3"
+                        style="
+                          text-align: right;
+                          width: 60px;
+                          justify-content: end;
+                        "
+                      >
+                        0
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="input-group" style="justify-content: end;">
+                    <input
+                      class="markupPricing"
+                      type="text"
+                      class=""
+                      placeholder="定價"
+                      value="50"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        x
+                      </span>
+                    </div>
+                    <input
+                      class="markupVehicle"
+                      type="text"
+                      class=""
+                      placeholder="台數"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text markupAmount"
+                        style="
+                          text-align: right;
+                          width: 60px;
+                          justify-content: end;
+                        "
+                      >
+                        0
+                      </span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr style="text-align: center;">
+                <th colspan="5">
+                  <button
+                    type="button"
+                    class="btn btn-warning calculate"
+                    style="width: 100%;"
+                  >
+                    計算
+                  </button>
+                </th>
+              </tr>
+              <tr style="text-align: left;">
+                <th colspan="5">
+                  實際台數 = 今日台數 - 昨日台數 - 自洗台數
+                  <br />
+                  統計金額 = 統計總金額 - 午餐費 - 其他費
+                  <br />
+                  實際金額 = 總現金 - 每日本金
+                </th>
+              </tr>
+              <tr style="text-align: center;">
+                <th colspan="5" class="title"></th>
+              </tr>
+              <tr>
+                <th>統計</th>
+                <td colspan="2">
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        統計
+                        <br />
+                        台數
+                      </span>
+                    </div>
+                    <div class="input-group-prepend">
+                      <span class="input-group-text statisticsVehicle">
+                        0
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <input
+                      type="text"
+                      class="todayVehicle"
+                      placeholder="今日台數"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        -
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      class="yesterdayVehicle"
+                      placeholder="昨日台數"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        -
+                      </span>
+                    </div>
+                    <input
+                      class="ownVehicle"
+                      type="text"
+                      placeholder="自洗台數"
+                    />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        實際
+                        <br />
+                        台數
+                      </span>
+                    </div>
+                    <div class="input-group-prepend">
+                      <span class="input-group-text shouldVehicle">
+                        0
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text"
+                        style="width: 60px; justify-content: center;"
+                      >
+                        統計
+                        <br />
+                        總
+                        <br />
+                        金額
+                      </span>
+                    </div>
+                    <div class="input-group-prepend">
+                      <span class="input-group-text statisticalTotalAmount">
+                        0
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        -
+                      </span>
+                    </div>
+                    <input class="lunchFee" type="text" placeholder="午餐費" />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        -
+                      </span>
+                    </div>
+                    <input class="otherFee" type="text" placeholder="其他費" />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text"
+                        style="
+                          text-align: right;
+                          width: 60px;
+                          justify-content: end;
+                        "
+                      >
+                        統計
+                        <br />
+                        金額
+                      </span>
+                    </div>
+                    <div class="input-group-prepend">
+                      <span class="input-group-text statisticalAmount">
+                        0
+                      </span>
+                    </div>
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text"
+                        style="
+                          text-align: right;
+                          width: 60px;
+                          justify-content: end;
+                        "
+                      >
+                        實際
+                        <br />
+                        金額
+                      </span>
+                    </div>
+                    <input
+                      class="shouldAmount"
+                      type="text"
+                      placeholder="實際金額"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr style="text-align: left;">
+                <th>
+                  結算
+                </th>
+                <th colspan="2" class="pricingMessage"></th>
+                <th colspan="2" class="amountMessage"></th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        function title() {
+          //實際台數
+          let shouldVehicle =
+            Number($('.todayVehicle').val()) -
+            Number($('.yesterdayVehicle').val()) -
+            Number($('.ownVehicle').val())
+
+          const title = $('.title')
+
+          // 獲取當前日期
+          const currentDate = new Date()
+          const year = currentDate.getFullYear() - 1911
+          const month = currentDate.getMonth() + 1 // getMonth() 返回值範圍為 0-11
+          const date = currentDate.getDate()
+          const dayIndex = currentDate.getDay() // getDay() 返回值範圍為 0-6
+
+          // 轉換星期索引為中文
+          const daysOfWeek = ['日', '一', '二', '三', '四', '五', '六']
+          const dayOfWeek = daysOfWeek[dayIndex]
+
+          // 格式化日期字串
+          const formattedDate = ` ${year} 年 ${month} 月 ${date} 日 <${dayOfWeek}> ${shouldVehicle} 台`
+
+          // 顯示日期
+          title.text('').text(formattedDate)
+        }
+        title()
+        function calculate() {
+          let basicAmount1 =
+            $('.basicVehicle1').val() * $('.basicPricing1').val()
+          $('.basicAmount1').text('').text(basicAmount1)
+          let basicAmount2 =
+            $('.basicVehicle2').val() * $('.basicPricing2').val()
+          $('.basicAmount2').text('').text(basicAmount2)
+          let basicAmount3 =
+            $('.basicVehicle3').val() * $('.basicPricing3').val()
+          $('.basicAmount3').text('').text(basicAmount3)
+          let coatingAmount1 =
+            $('.coatingVehicle1').val() * $('.coatingPricing1').val()
+          $('.coatingAmount1').text('').text(coatingAmount1)
+          let coatingAmount2 =
+            $('.coatingVehicle2').val() * $('.coatingPricing2').val()
+          $('.coatingAmount2').text('').text(coatingAmount2)
+          let coatingAmount3 =
+            $('.coatingVehicle3').val() * $('.coatingPricing3').val()
+          $('.coatingAmount3').text('').text(coatingAmount3)
+          let markupAmount =
+            $('.markupVehicle').val() * $('.markupPricing').val()
+          $('.markupAmount').text('').text(markupAmount)
+
+          //統計台數
+          let statisticsVehicle =
+            Number($('.basicVehicle1').val()) +
+            Number($('.basicVehicle2').val()) +
+            Number($('.basicVehicle3').val()) +
+            Number($('.coatingVehicle1').val()) +
+            Number($('.coatingVehicle2').val()) +
+            Number($('.coatingVehicle3').val())
+          $('.statisticsVehicle').text('').text(statisticsVehicle)
+
+          //實際台數
+          let shouldVehicle =
+            Number($('.todayVehicle').val()) -
+            Number($('.yesterdayVehicle').val()) -
+            Number($('.ownVehicle').val())
+          $('.shouldVehicle').text('').text(shouldVehicle)
+
+          //標題台數
+          title()
+
+          //pricingMessage
+          let pricingMessage = '結算中...'
+          if (shouldVehicle > statisticsVehicle) {
+            //實際台數 > 統計台數
+            let vehicle = shouldVehicle - statisticsVehicle
+            pricingMessage = `
+                            <div class="alert alert-danger" role="alert">
+                              少貼 ${vehicle} 個磁鐵
+                            </div><br><p style="font-size: 14px"class="text-center">實際台數 > 統計台數<p>`
+          } else if (shouldVehicle < statisticsVehicle) {
+            //實際台數 < 統計台數
+            let vehicle = statisticsVehicle - shouldVehicle
+            pricingMessage = `
+                            <div class="alert alert-warning" role="alert">
+                              多貼 ${vehicle} 個磁鐵
+                            </div><br><p style="font-size: 14px"class="text-center">實際台數 < 統計台數<p>`
+          } else if (shouldVehicle == statisticsVehicle) {
+            //實際台數 == 統計台數
+            pricingMessage = `
+                            <div class="alert alert-success text-center" role="alert">
+                              台數正確
+                            </div><br><p style="font-size: 14px" class="text-center">實際台數 = 統計台數<p>`
+          }
+
+          $('.pricingMessage').html('').html(pricingMessage)
+
+          //統計總金額
+          let statisticalTotalAmount =
+            basicAmount1 +
+            basicAmount2 +
+            basicAmount3 +
+            coatingAmount1 +
+            coatingAmount2 +
+            coatingAmount3 +
+            markupAmount
+          $('.statisticalTotalAmount').text('').text(statisticalTotalAmount)
+
+          //統計金額
+          let statisticalAmount =
+            statisticalTotalAmount -
+            Number($('.lunchFee').val()) -
+            Number($('.otherFee').val())
+          $('.statisticalAmount').text('').text(statisticalAmount)
+
+          //amountMessage
+          let shouldAmount = Number($('.shouldAmount').val())
+          let amountMessage = '結算中...'
+          if (shouldAmount > statisticalAmount) {
+            //實際金額 > 統計金額
+            let amount = shouldAmount - statisticalAmount
+            amountMessage = `
+                            <div class="alert alert-danger" role="alert">
+                              ${amount}，少貼磁鐵
+                            </div><br><p style="font-size: 14px"class="text-center">實際金額 > 統計金額<p>`
+          } else if (shouldAmount < statisticalAmount) {
+            //實際金額 < 統計金額
+            let amount = statisticalAmount - shouldAmount
+            amountMessage = `
+                            <div class="alert alert-warning" role="alert">
+                              ${amount}，多貼磁鐵
+                            </div><br><p style="font-size: 14px"class="text-center">實際金額 < 統計金額<p>`
+          } else if (shouldAmount == statisticalAmount) {
+            //實際金額 == 統計金額
+            amountMessage = `
+                            <div class="alert alert-success text-center" role="alert">
+                              金額正確
+                            </div><br><p style="font-size: 14px" class="text-center">實際金額 = 統計金額<p>`
+          }
+
+          $('.amountMessage').html('').html(amountMessage)
+        }
+
+        $(
+          `.calculate, .basicVehicle1, .basicVehicle2, .basicVehicle3, .coatingVehicle1, .coatingVehicle2, .coatingVehicle3, .markupVehicle,
+           .todayVehicle, .yesterdayVehicle, .ownVehicle,
+           .lunchFee, .otherFee, .shouldAmount`,
+        ).on('change click', calculate)
+      })
+    </script>
+  </body>
+</html>
