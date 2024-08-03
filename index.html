@@ -28,9 +28,12 @@
       .coatingVehicle1,
       .coatingVehicle2,
       .coatingVehicle3,
-      .markupPricing,
-      .markupVehicle,
-      .markupAmount,
+      .nanometerPricing1,
+      .nanometerPricing2,
+      .nanometerPricing3,
+      .nanometerVehicle1,
+      .nanometerVehicle2,
+      .nanometerVehicle3,
       .principal,
       .lunchFee,
       .otherFee {
@@ -57,6 +60,10 @@
         width: 84px;
         text-align: right;
       }
+
+      .input-group-text {
+        border-radius: 0;
+      }
     </style>
   </head>
   <body>
@@ -70,15 +77,20 @@
               </tr>
               <tr>
                 <th style="width: 8%;"></th>
-                <th style="width: 23%;">140</th>
-                <th style="width: 23%;">140-175</th>
-                <th style="width: 23%;">175</th>
-                <th style="width: 23%;">加價</th>
+                <th style="width: 23%;">轎車</th>
+                <th style="width: 23%;">休旅車</th>
+                <th style="width: 23%;">
+                  商務車
+                  <br />
+                  皮卡車
+                  <br />
+                  大G
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th>基本水洗</th>
+                <th>基本</th>
                 <td>
                   <div class="input-group" style="justify-content: end;">
                     <input
@@ -193,10 +205,9 @@
                     </div>
                   </div>
                 </td>
-                <td></td>
               </tr>
               <tr>
-                <th>亮彩鍍膜</th>
+                <th>亮彩</th>
                 <td>
                   <div class="input-group" style="justify-content: end;">
                     <input
@@ -311,15 +322,11 @@
                     </div>
                   </div>
                 </td>
+              </tr>
+                <th>奈米</th>
                 <td>
                   <div class="input-group" style="justify-content: end;">
-                    <input
-                      class="markupPricing"
-                      type="text"
-                      class=""
-                      placeholder="定價"
-                      value="50"
-                    />
+                    <input class="nanometerPricing1" type="text" class="" placeholder="定價" value="350" />
                   </div>
                   <div class="input-group" style="justify-content: end;">
                     <div class="input-group-prepend">
@@ -327,31 +334,71 @@
                         x
                       </span>
                     </div>
-                    <input
-                      class="markupVehicle"
-                      type="text"
-                      class=""
-                      placeholder="台數"
-                    />
+                    <input class="nanometerVehicle1" type="text" class="" placeholder="台數" />
                   </div>
                   <div class="input-group" style="justify-content: end;">
                     <div class="input-group-prepend">
-                      <span
-                        class="input-group-text markupAmount"
-                        style="
-                          text-align: right;
-                          width: 60px;
-                          justify-content: end;
-                        "
-                      >
+                      <span class="input-group-text nanometerAmount1" style="
+                                          text-align: right;
+                                          width: 60px;
+                                          justify-content: end;
+                                        ">
                         0
                       </span>
                     </div>
                   </div>
                 </td>
-              </tr>
+                <td>
+                  <div class="input-group" style="justify-content: end;">
+                    <input class="nanometerPricing2" type="text" class="" placeholder="定價" value="400" />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        x
+                      </span>
+                    </div>
+                    <input class="nanometerVehicle2" type="text" class="" placeholder="台數" />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text nanometerAmount2" style="
+                                          text-align: right;
+                                          width: 60px;
+                                          justify-content: end;
+                                        ">
+                        0
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="input-group" style="justify-content: end;">
+                    <input class="nanometerPricing3" type="text" class="" placeholder="定價" value="450" />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        x
+                      </span>
+                    </div>
+                    <input class="nanometerVehicle3" type="text" class="" placeholder="台數" />
+                  </div>
+                  <div class="input-group" style="justify-content: end;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text nanometerAmount3" style="
+                                          text-align: right;
+                                          width: 60px;
+                                          justify-content: end;
+                                        ">
+                        0
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                </tr>
               <tr style="text-align: center;">
-                <th colspan="5">
+                <th colspan="4">
                   <button
                     type="button"
                     class="btn btn-warning calculate"
@@ -362,7 +409,20 @@
                 </th>
               </tr>
               <tr style="text-align: left;">
-                <th colspan="5">
+                <th colspan="2">
+                  功能介紹
+                  <br />
+                  基本: 泡泡
+                  <br />
+                  亮彩: 泡泡+洗車液
+                  <br />
+                  (可以洗的更乾淨)
+                  <br />
+                  奈米: 泡泡+洗車液+鍍膜
+                  <br />
+                  (防潑水+板金光澤)時效: 一週
+                </th>
+                <th colspan="2">
                   實際台數 = 今日台數 - 昨日台數 - 自洗台數
                   <br />
                   統計金額 = 統計總金額 - 午餐費 - 其他費
@@ -371,10 +431,9 @@
                 </th>
               </tr>
               <tr style="text-align: center;">
-                <th colspan="5" class="title"></th>
+                <th colspan="4" class="title"></th>
               </tr>
               <tr>
-                <th>統計</th>
                 <td colspan="2">
                   <div class="input-group" style="justify-content: end;">
                     <div class="input-group-prepend">
@@ -517,9 +576,6 @@
                 </td>
               </tr>
               <tr style="text-align: left;">
-                <th>
-                  結算
-                </th>
                 <th colspan="2" class="pricingMessage"></th>
                 <th colspan="2" class="amountMessage"></th>
               </tr>
@@ -569,27 +625,26 @@
         }
         title()
         function calculate() {
-          let basicAmount1 =
-            $('.basicVehicle1').val() * $('.basicPricing1').val()
+          let basicAmount1 = $('.basicVehicle1').val() * $('.basicPricing1').val()
           $('.basicAmount1').text('').text(basicAmount1)
-          let basicAmount2 =
-            $('.basicVehicle2').val() * $('.basicPricing2').val()
+          let basicAmount2 = $('.basicVehicle2').val() * $('.basicPricing2').val()
           $('.basicAmount2').text('').text(basicAmount2)
-          let basicAmount3 =
-            $('.basicVehicle3').val() * $('.basicPricing3').val()
+          let basicAmount3 = $('.basicVehicle3').val() * $('.basicPricing3').val()
           $('.basicAmount3').text('').text(basicAmount3)
-          let coatingAmount1 =
-            $('.coatingVehicle1').val() * $('.coatingPricing1').val()
+
+          let coatingAmount1 = $('.coatingVehicle1').val() * $('.coatingPricing1').val()
           $('.coatingAmount1').text('').text(coatingAmount1)
-          let coatingAmount2 =
-            $('.coatingVehicle2').val() * $('.coatingPricing2').val()
+          let coatingAmount2 = $('.coatingVehicle2').val() * $('.coatingPricing2').val()
           $('.coatingAmount2').text('').text(coatingAmount2)
-          let coatingAmount3 =
-            $('.coatingVehicle3').val() * $('.coatingPricing3').val()
+          let coatingAmount3 = $('.coatingVehicle3').val() * $('.coatingPricing3').val()
           $('.coatingAmount3').text('').text(coatingAmount3)
-          let markupAmount =
-            $('.markupVehicle').val() * $('.markupPricing').val()
-          $('.markupAmount').text('').text(markupAmount)
+
+          let nanometerAmount1 = $('.nanometerVehicle1').val() * $('.nanometerPricing1').val()
+          $('.nanometerAmount1').text('').text(nanometerAmount1)
+          let nanometerAmount2 = $('.nanometerVehicle2').val() * $('.nanometerPricing2').val()
+          $('.nanometerAmount2').text('').text(nanometerAmount2)
+          let nanometerAmount3 = $('.nanometerVehicle3').val() * $('.nanometerPricing3').val()
+          $('.nanometerAmount3').text('').text(nanometerAmount3)
 
           //統計台數
           let statisticsVehicle =
@@ -598,7 +653,10 @@
             Number($('.basicVehicle3').val()) +
             Number($('.coatingVehicle1').val()) +
             Number($('.coatingVehicle2').val()) +
-            Number($('.coatingVehicle3').val())
+            Number($('.coatingVehicle3').val()) +
+            Number($('.nanometerVehicle1').val()) +
+            Number($('.nanometerVehicle2').val()) +
+            Number($('.nanometerVehicle3').val())
           $('.statisticsVehicle').text('').text(statisticsVehicle)
 
           //實際台數
@@ -645,7 +703,9 @@
             coatingAmount1 +
             coatingAmount2 +
             coatingAmount3 +
-            markupAmount
+            nanometerAmount1 +
+            nanometerAmount2 +
+            nanometerAmount3
           $('.statisticalTotalAmount').text('').text(statisticalTotalAmount)
 
           //統計金額
@@ -684,7 +744,9 @@
         }
 
         $(
-          `.calculate, .basicVehicle1, .basicVehicle2, .basicVehicle3, .coatingVehicle1, .coatingVehicle2, .coatingVehicle3, .markupVehicle,
+          `.calculate, .basicVehicle1, .basicVehicle2, .basicVehicle3,
+           .coatingVehicle1, .coatingVehicle2, .coatingVehicle3,
+           .nanometerVehicle1, .nanometerVehicle2, .nanometerVehicle3,
            .todayVehicle, .yesterdayVehicle, .ownVehicle,
            .lunchFee, .otherFee, .shouldAmount`,
         ).on('change click', calculate)
