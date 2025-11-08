@@ -167,7 +167,7 @@ $(document).ready(function () {
     const month = currentDate.getMonth() + 1;
     const date = currentDate.getDate();
     const dayOfWeek = ['日','一','二','三','四','五','六'][currentDate.getDay()];
-    title.text(`${year} 年 ${month} 月 ${date} 日 <${dayOfWeek}> ${shouldVehicle} 台`);
+    title.text(`${year} 年 ${month} 月 ${date} 日 (${dayOfWeek}) ${shouldVehicle} 台`);
   }
 
   function calculateAmounts() {
@@ -200,7 +200,7 @@ $(document).ready(function () {
     } else if (shouldVehicle < totalVehicles) {
       vehicleMsg = `<div class="alert alert-warning">多貼 ${totalVehicles - shouldVehicle} 個磁鐵</div>`;
     } else if (shouldVehicle == 0 && totalVehicles == 0) {
-      vehicleMsg = `<div class="alert alert-secondary text-center">統計中...</div>`;
+      vehicleMsg = `<div class="alert alert-secondary text-center">統計台數</div>`;
     } else {
       vehicleMsg = `<div class="alert alert-success text-center">台數正確</div>`;
     }
@@ -223,7 +223,7 @@ $(document).ready(function () {
     } else if (shouldAmount < statisticalAmount) {
       amountMsg = `<div class="alert alert-warning">${statisticalAmount - shouldAmount}，多貼磁鐵</div>`;
     } else if (shouldAmount == 0 && statisticalAmount == 0) {
-      amountMsg = `<div class="alert alert-secondary text-center">計算中...</div>`;
+      amountMsg = `<div class="alert alert-secondary text-center">計算金額</div>`;
     } else {
       amountMsg = `<div class="alert alert-success text-center">金額正確</div>`;
     }
