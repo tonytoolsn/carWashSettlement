@@ -63,3 +63,15 @@
     text-align: right;
     padding-right: 10px;
 }
+
+.color-white {
+    color: white;
+}
+
+.w-60 {
+    width: 60px;
+}
+
+.h-37 {
+    height: 37px;
+}
