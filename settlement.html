@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Static Navigation - SB Admin</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/settlement.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="dashboard.html">後台</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                        ><i class="fas fa-user fa-fw"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">PT專區</div>
+                            <a
+                                class="nav-link collapsed"
+                                href="#"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapsePT"
+                                aria-expanded="false"
+                                aria-controls="collapsePT"
+                            >
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                PT專區
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePT" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="settlement.html">每日結算表</a>
+                                    <a class="nav-link" href="work-instructions.html">工作須知</a>
+                                </nav>
+                            </div>
+
+                            <!-- <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="dashboard.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a
+                                class="nav-link collapsed"
+                                href="#"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseLayouts"
+                                aria-expanded="false"
+                                aria-controls="collapseLayouts"
+                            >
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Layouts
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                </nav>
+                            </div>
+                            <a
+                                class="nav-link collapsed"
+                                href="#"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapsePages"
+                                aria-expanded="false"
+                                aria-controls="collapsePages"
+                            >
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pages
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a
+                                        class="nav-link collapsed"
+                                        href="#"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#pagesCollapseAuth"
+                                        aria-expanded="false"
+                                        aria-controls="pagesCollapseAuth"
+                                    >
+                                        Authentication
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+                                    <a
+                                        class="nav-link collapsed"
+                                        href="#"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#pagesCollapseError"
+                                        aria-expanded="false"
+                                        aria-controls="pagesCollapseError"
+                                    >
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div
+                                        class="collapse"
+                                        id="pagesCollapseError"
+                                        aria-labelledby="headingOne"
+                                        data-bs-parent="#sidenavAccordionPages"
+                                    >
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">401 Page</a>
+                                            <a class="nav-link" href="404.html">404 Page</a>
+                                            <a class="nav-link" href="500.html">500 Page</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a> -->
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">每日結算表</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="dashboard.html">首頁</a></li>
+                            <li class="breadcrumb-item active">每日結算表</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p class="mb-0">整理中...</p>
+                            </div>
+                        </div>
+                        <div class="container-fluid my-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <table class="table table-bordered table-hover align-middle">
+                                        <thead class="table-light text-center">
+                                            <tr>
+                                                <th class="title"></th>
+                                            </tr>
+                                            <tr>
+                                                <th>轎車</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex justify-content-center align-items-center mb-1">
+                                                        <span class="input-group-text me-2">基本</span>
+                                                        <input type="text" class="form-control basicPricing1" value="250" placeholder="定價" />
+                                                        <span class="input-group-text mx-2">x</span>
+                                                        <input type="text" class="form-control basicVehicle1" placeholder="台數" />
+                                                        <span class="badge bg-secondary ms-2 basicAmount1">0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex justify-content-center align-items-center mb-1">
+                                                        <span class="input-group-text me-2">亮彩</span>
+                                                        <input type="text" class="form-control coatingPricing1" value="300" placeholder="定價" />
+                                                        <span class="input-group-text mx-2">x</span>
+                                                        <input type="text" class="form-control coatingVehicle1" placeholder="台數" />
+                                                        <span class="badge bg-secondary ms-2 coatingAmount1">0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex justify-content-center align-items-center mb-1">
+                                                        <span class="input-group-text me-2">奈米</span>
+                                                        <input type="text" class="form-control nanometerPricing1" value="350" placeholder="定價" />
+                                                        <span class="input-group-text mx-2">x</span>
+                                                        <input type="text" class="form-control nanometerVehicle1" placeholder="台數" />
+                                                        <span class="badge bg-secondary ms-2 nanometerAmount1">0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="table-light text-center">
+                                                <th>休旅車</th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex justify-content-center align-items-center mb-1">
+                                                        <span class="input-group-text me-2">基本</span>
+                                                        <input type="text" class="form-control basicPricing2" value="300" placeholder="定價" />
+                                                        <span class="input-group-text mx-2">x</span>
+                                                        <input type="text" class="form-control basicVehicle2" placeholder="台數" />
+                                                        <span class="badge bg-secondary ms-2 basicAmount2">0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex justify-content-center align-items-center mb-1">
+                                                        <span class="input-group-text me-2">亮彩</span>
+                                                        <input type="text" class="form-control coatingPricing2" value="350" placeholder="定價" />
+                                                        <span class="input-group-text mx-2">x</span>
+                                                        <input type="text" class="form-control coatingVehicle2" placeholder="台數" />
+                                                        <span class="badge bg-secondary ms-2 coatingAmount2">0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex justify-content-center align-items-center mb-1">
+                                                        <span class="input-group-text me-2">奈米</span>
+                                                        <input type="text" class="form-control nanometerPricing2" value="400" placeholder="定價" />
+                                                        <span class="input-group-text mx-2">x</span>
+                                                        <input type="text" class="form-control nanometerVehicle2" placeholder="台數" />
+                                                        <span class="badge bg-secondary ms-2 nanometerAmount2">0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr style="text-align: center">
+                                                <th class="title"></th>
+                                            </tr>
+                                            <!-- 台數 / 金額訊息 -->
+                                            <tr>
+                                                <td class="pricingMessage text-center">
+                                                    <div class="alert alert-secondary text-center">統計中...</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <!-- 左側：台數 -->
+                                                <td>
+                                                    <table class="d-flex justify-content-center">
+                                                        <tr>
+                                                            <td>
+                                                                <!-- 統計台數 -->
+                                                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                                                    <span class="input-group-text text-center" style="width: 60px">
+                                                                        統計<br />台數
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td style="height: 60px">
+                                                                <span
+                                                                    class="d-flex justify-content-center align-items-center bg-secondary statisticsVehicle w-100 h-100"
+                                                                    >0</span
+                                                                >
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>
+                                                                <!-- 今日台數 -->
+                                                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                                                    <input
+                                                                        type="text"
+                                                                        class="form-control todayVehicle"
+                                                                        placeholder="今日台數"
+                                                                        style="width: 120px"
+                                                                    />
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="input-group-text">-</span></td>
+                                                            <td>
+                                                                <input
+                                                                    type="text"
+                                                                    class="form-control yesterdayVehicle"
+                                                                    placeholder="昨日台數"
+                                                                    style="width: 120px"
+                                                                />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="input-group-text">-</span></td>
+                                                            <td>
+                                                                <input
+                                                                    type="text"
+                                                                    class="form-control ownVehicle"
+                                                                    placeholder="自洗台數"
+                                                                    style="width: 120px"
+                                                                />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="input-group-text text-center" style="width: 60px"> 實際<br />台數 </span>
+                                                            </td>
+                                                            <td style="height: 60px">
+                                                                <div
+                                                                    class="d-flex justify-content-center align-items-center bg-secondary shouldVehicle w-100 h-100"
+                                                                >
+                                                                    0
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <!-- 台數 / 金額訊息 -->
+                                            <tr>
+                                                <td class="amountMessage text-center">
+                                                    <div class="alert alert-secondary text-center">計算中...</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <!-- 右側：金額 -->
+                                                <td>
+                                                    <table class="d-flex justify-content-center">
+                                                        <tr>
+                                                            <td>
+                                                                <span class="input-group-text text-center" style="width: 60px"> +加購 </span>
+                                                            </td>
+                                                            <td>
+                                                                <input
+                                                                    type="text"
+                                                                    class="form-control addOnAmount"
+                                                                    placeholder="加購金額"
+                                                                    style="width: 120px"
+                                                                />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="input-group-text text-center" style="width: 60px">
+                                                                    統計<br />總<br />金額
+                                                                </span>
+                                                            </td>
+                                                            <td style="height: 85px">
+                                                                <span
+                                                                    class="d-flex justify-content-center align-items-center bg-secondary statisticalTotalAmount w-100 h-100"
+                                                                    >0</span
+                                                                >
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="input-group-text">-</span></td>
+                                                            <td>
+                                                                <input
+                                                                    type="text"
+                                                                    class="form-control lunchFee"
+                                                                    placeholder="午餐費"
+                                                                    style="width: 120px"
+                                                                />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="input-group-text">-</span></td>
+                                                            <td>
+                                                                <input
+                                                                    type="text"
+                                                                    class="form-control otherFee"
+                                                                    placeholder="其他費"
+                                                                    style="width: 120px"
+                                                                />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="input-group-text text-center" style="width: 60px"> 統計<br />金額 </span>
+                                                            </td>
+                                                            <td style="height: 60px">
+                                                                <span
+                                                                    class="d-flex justify-content-center align-items-center bg-secondary statisticalAmount w-100 h-100"
+                                                                    >0</span
+                                                                >
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="input-group-text text-center" style="width: 60px"> 實際<br />金額 </span>
+                                                            </td>
+                                                            <td style="height: 60px">
+                                                                <input
+                                                                    type="text"
+                                                                    class="form-control shouldAmount h-100"
+                                                                    placeholder="實際金額"
+                                                                    style="width: 120px"
+                                                                />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <!-- 計算按鈕 -->
+                                            <tr>
+                                                <td class="text-center">
+                                                    <button class="btn btn-warning calculate w-100">
+                                                        <i class="fa-solid fa-calculator me-1"></i> 計算
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex justify-content-center align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; cws 2025</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- 彈跳視窗 -->
+        <div class="modal fade" id="calculatorModal" tabindex="-1" aria-labelledby="calculatorModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg">
+                    <div class="modal-body">
+                        <!-- ✅ 你的計算機 -->
+                        <div class="calculator card border-0">
+                            <input type="text" id="display" class="form-control mb-3 text-end" disabled placeholder="0" />
+
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <!-- 第一列 -->
+                                <button class="btn btn-secondary m-1 flex-fill" onclick="press('7')">7</button>
+                                <button class="btn btn-secondary m-1 flex-fill" onclick="press('8')">8</button>
+                                <button class="btn btn-secondary m-1 flex-fill" onclick="press('9')">9</button>
+
+                                <!-- 第二列 -->
+                                <button class="btn btn-secondary m-1 flex-fill" onclick="press('4')">4</button>
+                                <button class="btn btn-secondary m-1 flex-fill" onclick="press('5')">5</button>
+                                <button class="btn btn-secondary m-1 flex-fill" onclick="press('6')">6</button>
+
+                                <!-- 第三列 -->
+                                <button class="btn btn-secondary m-1 flex-fill" onclick="press('1')">1</button>
+                                <button class="btn btn-secondary m-1 flex-fill" onclick="press('2')">2</button>
+                                <button class="btn btn-secondary m-1 flex-fill" onclick="press('3')">3</button>
+
+                                <!-- 第四列 -->
+                                <button class="btn btn-secondary m-1 flex-fill" onclick="press('0')">0</button>
+                                <button class="btn btn-warning m-1 flex-fill" onclick="backspace()">⌫</button>
+                                <button class="btn btn-success m-1 flex-fill" onclick="sendToTarget()">⏎</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/settlement.js"></script>
+    </body>
+</html>

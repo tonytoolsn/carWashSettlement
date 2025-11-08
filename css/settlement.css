@@ -1,0 +1,65 @@
+.basicPricing1,
+.basicPricing2,
+.basicPricing3,
+.basicVehicle1,
+.basicVehicle2,
+.basicVehicle3,
+.coatingPricing1,
+.coatingPricing2,
+.coatingPricing3,
+.coatingVehicle1,
+.coatingVehicle2,
+.coatingVehicle3,
+.nanometerPricing1,
+.nanometerPricing2,
+.nanometerPricing3,
+.nanometerVehicle1,
+.nanometerVehicle2,
+.nanometerVehicle3,
+.principal,
+.lunchFee,
+.otherFee {
+    width: 60px;
+    text-align: right !important;
+}
+
+.input-group-text {
+    width: 60px;
+    justify-content: end;
+}
+
+.todayVehicle,
+.yesterdayVehicle,
+.ownVehicle,
+.principal,
+.addOnAmount,
+.lunchFee,
+.otherFee,
+.shouldVehicle,
+.statisticsVehicle,
+.statisticalTotalAmount,
+.statisticalAmount,
+.shouldAmount {
+    width: 84px;
+    text-align: right;
+}
+
+.input-group-text {
+    border-radius: 0;
+}
+
+.calculator {
+    max-width: 250px;
+    margin: 50px auto;
+}
+.calculator button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+#display {
+    height: 60px;
+    font-size: 1.5rem;
+    text-align: right;
+    padding-right: 10px;
+}
