@@ -251,7 +251,7 @@ let expression = '';
 document.querySelectorAll('.form-control').forEach(input => {
     input.addEventListener('click', function () {
         currentTarget = this; // 記錄點擊的目標
-        expression = this.value || '';
+        expression = '';
         document.getElementById('display').value = expression;
         const modal = new bootstrap.Modal(document.getElementById('calculatorModal'));
         modal.show();
