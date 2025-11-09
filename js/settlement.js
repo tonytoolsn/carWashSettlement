@@ -252,7 +252,7 @@ document.querySelectorAll('.form-control').forEach(input => {
     input.addEventListener('click', function () {
         currentTarget = this; // 記錄點擊的目標
         expression = '';
-        document.getElementById('display').value = expression;
+        document.getElementById('display').value = 0;
         const modal = new bootstrap.Modal(document.getElementById('calculatorModal'));
         modal.show();
     });
